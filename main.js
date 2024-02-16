@@ -87,7 +87,8 @@ const tl0 = gsap.timeline({
         start: "top bottom",
         stop: "bottom top",
         pin: true,
-        scrub: true
+        scrub: true,
+        toggleActions: "play pause reverse reset",
     }
 })
 
