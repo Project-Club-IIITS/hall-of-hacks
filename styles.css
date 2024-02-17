@@ -182,3 +182,13 @@ body {
   }
 
 }
+
+@media (max-width: 450px) {
+  #roadmap1 {
+    transform: scale(0.75) translateX(-50vh);
+  }
+
+  #roadmap2 {
+    transform: scale(0.75) translateX(-10vh);
+  }
+}
