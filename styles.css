@@ -26,6 +26,10 @@ body {
   justify-content: center;
 }
 
+.about-image-main img {
+  width: 50%;
+}
+
 .about-nav {
   display: flex;
   justify-content: center;
@@ -45,7 +49,10 @@ body {
   padding: 10px;
   filter: brightness(25%);
   border-radius: 20px;
+  max-height: 200px;
 }
+
+
 
 @keyframes about-highlight-image {
   0% {
@@ -98,7 +105,6 @@ body {
   width: 30px;
 
   animation: bubble 0.4s ease-out;
-  /* background-color: yellow; */
 }
 
 .about-prev-btn {
@@ -118,6 +124,26 @@ body {
     right: -10px;
   }
 
+}
+
+@media (max-width:450px) {
+  .about-item {
+    width: 50%;
+    filter: brightness(100%);
+  }
+
+  .about-btn {
+    top: 60px;
+  }
+
+  .about-image-main img {
+    width: 70%;
+  }
+
+  .about-item:hover,
+  .about-item-selected {
+    animation: none;
+  }
 }
 
 @keyframes bubble {
