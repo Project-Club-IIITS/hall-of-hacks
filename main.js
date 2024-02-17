@@ -14,10 +14,21 @@ tl.to("#parallax-1", { y: 450 }, 0)
 const prev = document.getElementById('about-prev-btn');
 const next = document.getElementById('about-next-btn');
 const list = document.getElementById('about-item-list');
+const mainImage = document.querySelector('.about-image-main img');
 
 const carouselImages = document.getElementsByClassName('about-item');
 const itemWidth = 200;
 const padding = 10;
+
+// Add click event listeners to each carousel image
+for (let i = 0; i < carouselImages.length; i++) {
+    carouselImages[i].addEventListener('click', () => {
+        // Get the src attribute of the clicked image
+        const src = carouselImages[i].getAttribute('src');
+        // Set the src attribute of the main image to the clicked image src
+        mainImage.setAttribute('src', src);
+    });
+}
 
 prev.addEventListener('click', () => {
     list.scrollLeft -= itemWidth + padding;
@@ -40,6 +51,7 @@ list.addEventListener('scroll', (_ev) => {
         }
     }
 });
+
 
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
